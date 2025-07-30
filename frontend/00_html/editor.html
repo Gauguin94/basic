@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>간단한 웹 에디터</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .toolbar button {
+      margin-right: 5px;
+    }
+    #editor {
+      border: 1px solid #ccc;
+      padding: 10px;
+      min-height: 150px;
+      margin-top: 10px;
+    }
+    #result {
+      white-space: pre-wrap;
+      border: 1px solid #999;
+      margin-top: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>심플 웹 에디터</h2>
+
+  <div class="toolbar">
+    <button onclick="execCmd('bold')">굵게</button>
+    <button onclick="execCmd('italic')">기울임</button>
+    <button onclick="execCmd('underline')">밑줄</button>
+    <button onclick="execCmd('foreColor', prompt('색상 입력 (예: red, #0000ff):'))">색상</button>
+    <button onclick="saveContent()">저장</button>
+  </div>
+
+  <div id="editor" contenteditable="true" spellcheck="true">
+    여기에 <b>문장을</b> 입력하고 <span style="color: blue;">단어</span>에 원하는 <span style="color: purple;">스타일</span>을 적용해 보세요!
+  </div>
+
+  <h4>저장된 HTML 결과</h4>
+  <div id="result"></div>
+
+  <script>
+    function execCmd(command, value = null) {
+      document.execCommand(command, false, value);
+    }
+
+    function saveContent() {
+      const html = document.getElementById('editor').innerHTML;
+      document.getElementById('result').innerText = html;
+    }
+  </script>
+
+</body>
+</html>
