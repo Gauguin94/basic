@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            const array = [
+                [0, 1, 2, 3],
+                [4, 5, 6, 7],
+                [8, 9, 10, 11]
+            ]
+            console.table(array)
+
+            const arr = [1, 2, 3, 4];
+            console.log(arr);
+            arr.length = 5;
+            console.log(arr)
+            arr[4] = 10;
+            console.log(arr);
+            arr.push(11);
+            console.log(arr);
+
+            const original = [1, [2, 3], 4];
+            const shallowCopyArray = [...original];
+
+            console.table(original)
+            console.table(shallowCopyArray)
+
+            shallowCopyArray[0] = 10;
+            console.log(original[0], shallowCopyArray[0]);
+
+            console.table(original)
+            console.table(shallowCopyArray)
+
+            shallowCopyArray[1][0] = 20;
+            console.log(original[1][0], shallowCopyArray[1][0]);
+
+            console.table(original)
+            console.table(shallowCopyArray)
+
+        </script>
+    </body>
+
+</html>

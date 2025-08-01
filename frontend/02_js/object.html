@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            const person = {
+                name: "고경남",
+                age: 32,
+                job: "Private House Guardian"
+            }
+            console.log(person.name, person.age, person.job, person.address)
+
+            person.name = "고경녀"
+            person.age = 32
+            person.job = "Data Scientist"
+            person.address = "한양"
+            console.log(person['name'], person['age'], person['job'], person['address'])
+        </script>
+        <script>
+            const fruits = ["사과", "딸기", "바나나"]
+            console.log(fruits[0])
+            fruits[3] = "수박"
+            console.table(fruits)
+        </script>
+    </body>
+
+</html>

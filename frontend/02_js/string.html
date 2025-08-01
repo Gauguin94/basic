@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            const name = "이름: 고경남 <br>직업: 도적";
+            console.log(name); // java : \n
+            document.write(name); // html : <br>
+        </script>
+        <br>
+        <script>
+            const name_ = "이름: 고경남 \0 직업: 도적";
+            console.log(name_); // java : \n
+            document.write(name_); // html : <br>
+        </script>
+        <br>
+        <script>
+            const name__ = "이름: 고경남 \b 직업: 도적";
+            console.log(name__); // java : \n
+            document.write(name__); // html : <br>
+        </script>
+        <br>
+        <script>
+            const num = 1234;
+            const num2 = 0.7;
+            console.log(num, typeof num);
+
+            let sum = num + num2;
+            console.log(sum, typeof sum);
+
+            const stringNum = String(num);
+            console.log(stringNum, typeof stringNum);
+
+            let ssum = stringNum + num2
+            console.log(ssum, typeof ssum);
+        </script>
+    </body>
+
+</html>

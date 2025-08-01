@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            function greet(name) {
+                return `ㅎㅇㅇ? ${name}님.`;
+            };
+            const message = greet("죤씨나");
+            document.write(message);
+            document.write('<p>');
+
+            const greet2 = (name) => {
+                return `ㅂㅇㅇ? ${name}님.`;
+            };
+            const message2 = greet2("죤씨나");
+            document.write(message2);
+            document.write('<p>');
+
+            const greet3 = function(name) {
+                return `ㄹㅎㅇ? ${name}님.`;
+            };
+            const message3 = greet3("죤씨나");
+            document.write(message3);
+        </script>
+    </body>
+
+</html>
