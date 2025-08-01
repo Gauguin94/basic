@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox 박스 정렬</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;  /* 수평 정렬 */
+      align-items: center;      /* 수직 정렬 */
+      border: 2px dashed #888;
+      height: 300px;
+    }
+
+    .item {
+      width: 80px;
+      height: 80px;
+      background-color: skyblue;
+      margin: 10px;
+      display: flex;
+      /*justify-content: center;*/
+      /*align-items: center;*/
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>[실습] 박스 정렬 (css/flexbox.html)</h2>
+  <p style="background: gold; padding: 10px; font-weight: bold;">
+    ▪ Flexbox를 이용해서 3개의 박스를 가로 및 세로 중앙 정렬
+  </p>
+
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+</body>
+</html>

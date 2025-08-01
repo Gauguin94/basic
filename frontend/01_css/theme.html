@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>테마 전환 예제</title>
+  <style>
+    /* 초기 변수 설정 (기본: 라이트 테마) */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+    }
+
+    /* 테마용 radio 숨김 처리 */
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* 실제 적용될 테마를 감싸는 박스 */
+    .container {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    /* 버튼 스타일 */
+    .theme-toggle label {
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .theme-toggle {
+      margin-bottom: 2rem;
+    }
+
+    /* ✅ 다크 테마 활성화 */
+    #dark:checked ~ .container {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+    }
+
+    /* ✅ 라이트 테마 활성화 */
+    #light:checked ~ .container {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ 테마 선택 radio 버튼 (container보다 위에 있어야 함) -->
+  <input type="radio" id="light" name="theme" checked />
+  <input type="radio" id="dark" name="theme" />
+
+  <!-- ✅ 라벨은 버튼 역할 -->
+  <div class="theme-toggle">
+    <label for="light">🌞 라이트 테마</label>
+    <label for="dark">🌙 다크 테마</label>
+  </div>
+
+  <!-- ✅ 테마 적용 대상 -->
+  <div class="container">
+    <h1>테마 전환 예제</h1>
+    <p>라디오 버튼을 클릭하여 테마를 변경해보세요.</p>
+  </div>
+
+</body>
+</html>

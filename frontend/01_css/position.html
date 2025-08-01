@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS position 속성 전체 예제</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .description {
+      padding: 30px;
+      background: #f9f9f9;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .description h1 {
+      margin-top: 0;
+    }
+
+    .section {
+      margin: 50px;
+      border: 2px solid #000;
+      padding: 20px;
+      position: relative;
+      height: 400px;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    /* static */
+    .static-box {
+      background-color: gray;
+      position: static;
+    }
+
+    /* relative */
+    .relative-origin {
+      width: 150px;
+      height: 100px;
+      border: 2px dashed #aaa;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 0;
+    }
+
+    .relative-box {
+      background-color: blue;
+      position: relative;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+
+    /* absolute */
+    .absolute-origin {
+      position: absolute;
+      top: 180px;
+      left: 20px;
+      width: 150px;
+      height: 100px;
+      border: 2px dashed #aaa;
+      z-index: 0;
+    }
+
+    .absolute-box {
+      background-color: red;
+      position: absolute;
+      top: 180px;
+      left: 20px;
+      z-index: 1;
+    }
+
+    /* fixed */
+    .fixed-box {
+      background-color: green;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    /* sticky */
+    .sticky-container {
+      height: 1500px;
+      padding: 50px;
+      background: #fafafa;
+    }
+
+    .sticky-box {
+      background-color: orange;
+      position: sticky;
+      top: 0;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .label {
+      font-size: 12px;
+      color: #444;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="description">
+    <h1>CSS position 속성 시각 예제</h1>
+    <p><strong>static</strong> : 기본값. 문서 흐름에 따라 배치됨</p>
+    <p><strong>relative</strong> : 원래 위치를 기준으로 top, left 등으로 이동 (공간은 유지됨)</p>
+    <p><strong>absolute</strong> : 가장 가까운 position이 지정된 조상을 기준으로 위치</p>
+    <p><strong>fixed</strong> : 브라우저 화면(Viewport)을 기준으로 고정됨</p>
+    <p><strong>sticky</strong> : 스크롤 시 지정된 위치에 도달하면 고정됨 (relative + fixed의 성질)</p>
+  </div>
+
+  <div class="sticky-container">
+    <div class="sticky-box">🧲 Sticky (스크롤 시 상단에 고정)</div>
+
+    <div class="section">
+
+      <div class="box static-box">static</div>
+
+      <div class="relative-origin"><div class="label">relative 원래 위치</div></div>
+      <div class="box relative-box">relative</div>
+
+      <div class="absolute-origin"><div class="label">absolute 기준 위치</div></div>
+      <div class="box absolute-box">absolute</div>
+
+    </div>
+  </div>
+
+  <div class="box fixed-box">fixed</div>
+
+</body>
+</html>

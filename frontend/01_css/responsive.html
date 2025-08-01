@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>반응형 Grid 레이아웃</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+      grid-template-rows: auto 1fr auto auto;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      grid-area: main;
+      background-color: #f1f1f1;
+      padding: 1rem;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #ddd;
+      padding: 1rem;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        grid-template-areas:
+          "header header"
+          "sidebar main"
+          "footer footer";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+      }
+
+      main {
+        overflow-y: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>헤더</header>
+    <main>메인 콘텐츠</main>
+    <aside>사이드바</aside>
+    <footer>푸터</footer>
+  </div>
+
+</body>
+</html>

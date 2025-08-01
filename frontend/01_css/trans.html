@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform and Transition Example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: green;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      border-radius: 15px;
+      transition: background-color 0.3s ease, transform 0.5s ease;
+    }
+
+    .box:hover {
+      background-color: orange;
+    }
+
+    .rotate {
+      transform: rotate(45deg);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: dodgerblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title">Transform and Transition Example</div>
+
+  <div id="hoverBox" class="box">Hover me!</div>
+
+  <button onclick="rotateBox()">Click Me!</button>
+
+  <script>
+    function rotateBox() {
+      const box = document.getElementById("hoverBox");
+      box.classList.toggle("rotate");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>블록 vs 인라인 스타일 비교</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+    }
+
+    .section {
+      border: 2px dashed #888;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .block-div {
+      background-color: lightblue;
+      border: 1px solid blue;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .inline-div {
+      background-color: lightgreen;
+      border: 1px solid green;
+      padding: 10px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>블록 요소 기본 스타일</h2>
+  <div class="section">
+    <div class="block-div">블록 스타일 div 1</div>
+    <div class="block-div">블록 스타일 div 2</div>
+  </div>
+
+  <h2>인라인 스타일로 변경한 div</h2>
+  <div class="section">
+    <div class="inline-div">인라인 스타일 div 1</div>
+    <div class="inline-div">인라인은 내부 내용에 의해 width가 결정됩니다. width 조절이 불가능합니다.</div>
+  </div>
+
+</body>
+</html>
