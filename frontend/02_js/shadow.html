@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const realHong = {
+                name: "고경남",
+                age: "32",
+                gender: "성중립",
+                job: "HouseKeeper",
+                skills: ["숨쉬기", "눕기", "식량 축내기"],
+                shadow: {
+                    color: "검은색"
+                }
+            }
+
+            const temp = JSON.stringify(realHong);
+            const fakeHong = JSON.parse(temp);
+
+            const idx = fakeHong.skills.indexOf("눕기");
+            if (idx !== -1) fakeHong.skills.splice(idx, 1)
+            delete fakeHong.shadow
+
+            document.write(JSON.stringify(realHong))
+            document.write("<hr>")
+            document.write(JSON.stringify(fakeHong))
+
+            console.log(realHong);
+            console.log(fakeHong);
+
+        </script>
+    </body>
+</html>

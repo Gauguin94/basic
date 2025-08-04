@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title>innerHTML vs textContent</title>
+    </head>
+    <body>
+        <h2>innerHTML 예제</h2>
+        <div id="html-div"></div>
+
+        <h2>textContent 예제</h2>
+        <div id="text-div"></div>
+
+        <h2>입력 상자</h2>
+        <input id="input" type="text" placeholder="여기에 입력하세요">
+
+        <script>
+            const hDiv = document.getElementById("html-div")
+            console.log(hDiv)
+            hDiv.innerHTML = "<strong>안녕하세요</strong>, <em>홍길동</em>입니다."
+
+            const tDiv = document.getElementById("text-div")
+            console.log(tDiv)
+            tDiv.textContent = "<strong>안녕하세요</strong>, <em>홍길동</em>입니다."
+
+            const inputMessage = document.getElementById("input")
+            console.log(inputMessage)
+        </script>
+    </body>
+</html>

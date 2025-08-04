@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 
 # 웹훅 URL
-WEBHOOK_URL = "'https://discord.com/api/webhooks/1399913282449444874/qoGbySHdgyqXlNWHqrNqsNpfSunIwIzEkXP8oM8di_rLXex2kmzyrKT1Socovx5yaSEu'"
+WEBHOOK_URL = "https://discord.com/api/webhooks/1399913282449444874/qoGbySHdgyqXlNWHqrNqsNpfSunIwIzEkXP8oM8di_rLXex2kmzyrKT1Socovx5yaSEu"
 
 # 메시지 전송 함수
 def send_discord_message(msg):
@@ -31,8 +31,8 @@ scheduler.add_job(
 # 월~금 17:55
 scheduler.add_job(
     send_discord_message,
-    CronTrigger(day_of_week='mon-fri', hour=17, minute=55),
-    args=["🔴 오후 5시 55분 퇴실"]
+    CronTrigger(day_of_week='mon-fri', hour=17, minute=52),
+    args=["🔴 오후 5시 52분 퇴실"]
 )
 
 print("⏳ APScheduler 알림 봇 실행 중...")
